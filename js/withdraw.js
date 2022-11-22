@@ -47,6 +47,7 @@ document.getElementById('btn-withdraw').addEventListener('click' , function(){
         return;
     }
     
+    
     const totalWithdrawAmount = newWithdrawAmount + previousWithdrawAmount;
     
     setTextElementValueById('withdraw-total' , totalWithdrawAmount);
