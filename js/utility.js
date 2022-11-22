@@ -6,13 +6,15 @@ function getInputFieldValueById(inputFieldId){
     return inputFieldValue;
 }
 
-function getElementById(inputInnerTextId){
-    const textElement = document.getElementById(inputInnerTextId);
-    const textElementString = textElement.innerText;
-    const textElementNumber = parseFloat(textElementString);
-    return textElementNumber;
+function getElementValueById(elementId){
+    const element = document.getElementById(elementId);
+    const elementValueString = element.innerText;
+    const elementValue = parseFloat(elementValueString);
+    return elementValue;
 }
 
-document.getElementById('btn-deposit').addEventListener('click' , function(){
+function setTextElementValueById(elementId , newValue){
+    const textElement = document.getElementById(elementId);
+    textElement.innerText = newValue;
+}
 
-})
