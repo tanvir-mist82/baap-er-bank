@@ -41,19 +41,15 @@ document.getElementById('btn-withdraw').addEventListener('click' , function(){
     const newWithdrawAmount = getInputFieldValueById('withdraw-field');
     
     const previousWithdrawAmount = getElementValueById('withdraw-total');
-
-    if(newWithdrawAmount > previousWithdrawAmount){
-        alert("You dont't have sufficient balance!");
-        return;
-    }
-    
     
     const totalWithdrawAmount = newWithdrawAmount + previousWithdrawAmount;
     
     setTextElementValueById('withdraw-total' , totalWithdrawAmount);
 
     const previousBalanceTotal = getElementValueById('balance-total');
+
     const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
+
     setTextElementValueById('balance-total' , newBalanceTotal);
 
 })
